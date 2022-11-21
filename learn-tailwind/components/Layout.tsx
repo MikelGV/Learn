@@ -37,7 +37,7 @@ export default function Layout({children, home}: {children: any, home: boolean})
             </header>
             <main>{children}</main>
             <footer>
-                <h1>this is footer</h1>
+                <h1 className="text-2xl font-light">this is footer</h1>
             </footer>
         </div>
     )
