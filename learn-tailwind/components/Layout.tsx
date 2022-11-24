@@ -24,16 +24,23 @@ export default function Layout({children, home}: {children: any, home: boolean})
 
 
             <header>
-                {home ? 
-                (
-                <>
-                    <h1 className='text-3xl font-bold underline'>Hello World!</h1>
-                </>
-                ): (
-                <>
-                    <h2 className="text-3xl font-bold">Hi World!</h2>
-                </>
-                )}
+                <div className="p-6 max-w-full mx-auto bg-white shadow-lg flex space-x-4">
+                    <div className="ml-auto">
+                        {home ? 
+                        (
+                        <>
+                            <h1 className='text-3xl font-bold underline'>Hello World!</h1>
+                        </>
+                        ): (
+                        <>
+                            <h2 className="text-3xl font-bold">Hi World!</h2>
+                        </>
+                        )}
+                    </div>
+                    <div>
+                        <h2 className="text-3xl font-bold">Hi World!</h2>
+                    </div>
+                </div>
             </header>
             <main>{children}</main>
             <footer>
