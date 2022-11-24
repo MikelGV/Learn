@@ -24,7 +24,7 @@ export default function Layout({children, home}: {children: any, home: boolean})
 
 
             <header>
-                <div className="p-6 max-w-full mx-auto bg-white shadow-lg flex space-x-4">
+                <div className="p-6 max-w-full mx-auto bg-white shadow-lg flex items-center space-x-4">
                     <div className="ml-auto">
                         {home ? 
                         (
