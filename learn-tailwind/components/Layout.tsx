@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Topbar from "./Topbar";
 
 const siteTitle: string = 'Tailwind test website'
 
@@ -22,7 +23,7 @@ export default function Layout({children, home}: {children: any, home: boolean})
             </Head>
 
             <header>
-                <div className="p-6 max-w-full mx-auto bg-gray-200 shadow-lg flex items-center space-x-4">
+                {/* <div className="p-6 max-w-full mx-auto bg-gray-200 shadow-lg flex items-center space-x-4">
                     <div className="ml-auto">
                         <ul className="flex items-center space-x-4">
                             <li>
@@ -39,7 +40,9 @@ export default function Layout({children, home}: {children: any, home: boolean})
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
+                <Topbar />
+
             </header>
             <main>{children}</main>
             <footer>
