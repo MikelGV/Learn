@@ -1,7 +1,7 @@
 export default function Topbar(): JSX.Element {
     return(
         <>
-            <div className="p-6 max-w-full mx-auto bg-gray-200 shadow-lg flex items-center space-x-4">
+            <div className="p-6 max-w-full mx-auto bg-gray-200 shadow-lg flex items-center space-x-4 font-bebasneue">
                 <div className="ml-auto">
                     <ul className="flex items-center space-x-4">
                         <li>
