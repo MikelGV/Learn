@@ -5,6 +5,8 @@ export default function Footer() {
                 <div className="flex items-center space-x-96">
                     <h1>Footer</h1>
                     <h1>Footer</h1>
+                    <h1>Made By <a href="https://www.mikelgaldos.com" target="_blank">Mikel Galdos</a></h1>
+                    <h1>Footer</h1>
                     <h1>Footer</h1>
 
                 </div>
