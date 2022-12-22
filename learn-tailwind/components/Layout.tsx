@@ -30,9 +30,7 @@ export default function Layout({children, home}: {children: any, home: boolean})
                 <Topbar />
             </header>
             <main>{children}</main>
-            <footer>
-                <Footer />
-            </footer>
+            <Footer />
         </div>
     )
 }
