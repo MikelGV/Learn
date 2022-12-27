@@ -28,13 +28,13 @@ export default function Topbar(): JSX.Element {
                 <div className="ml-auto">
                     <ul className="flex items-center space-x-4">
                         <li>
-                            <a target="_blank" href="https://twitter.com/FrankieLollia"><TwitterIcon/></a>
+                            <a target="_blank" href="https://twitter.com/FrankieLollia"><TwitterIcon className='hover:text-blue-300'/></a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://www.youtube.com/@frankielollia"><YouTubeIcon/></a>
+                            <a target="_blank" href="https://www.youtube.com/@frankielollia"><YouTubeIcon className='hover:text-red-500'/></a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://www.instagram.com/frankielollia/?hl=en"><InstagramIcon/></a>
+                            <a target="_blank" href="https://www.instagram.com/frankielollia/?hl=en"><InstagramIcon className='hover:text-rose-400'/></a>
                         </li>
                     </ul>
                 </div>
