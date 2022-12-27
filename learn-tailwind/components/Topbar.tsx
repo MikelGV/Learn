@@ -5,13 +5,16 @@ export default function Topbar(): JSX.Element {
                 <div className="ml-auto">
                     <ul className="flex items-center space-x-4">
                         <li>
-                            <a href="/">Home</a>
+                            <a className="mr-3" href="/">Home</a>
+                            <span className="border-r border border-slate-900"></span>
                         </li>
                         <li>
-                            <a href="#About">About</a>
+                            <a className="mr-3" href="#About">About</a>
+                            <span className="border-r border border-slate-900"></span>
                         </li>
                         <li>
-                            <a href="#Portfolio">Portfolio</a>
+                            <a className="mr-3" href="#Portfolio">Portfolio</a>
+                            <span className="border-r border border-slate-900"></span>
                         </li>
                         <li>
                             <a href="Contact">Contact</a>
