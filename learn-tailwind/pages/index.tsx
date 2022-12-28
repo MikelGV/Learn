@@ -27,6 +27,15 @@ export default function Home() {
           <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
         </div>
       </div>
+
+      <div className='p-6 font-bebasneue flex items-center'>
+        <div className='mx-44'>
+          <span>test</span>
+        </div>
+        <div className='mx-96'>
+          <img className='h-auto' src="/images/Frankie.png" alt="" />
+        </div>
+      </div>
       
     </Layout>
   )
