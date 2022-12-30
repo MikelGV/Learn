@@ -29,11 +29,12 @@ export default function Home() {
       </div>
 
       <div className='p-6 font-bebasneue flex items-center'>
-        <div className='mx-44'>
-          <span>test</span>
+        <div className='mx-80'>
+          <h1 className='text-7xl'>FRANKIE TAYLOR SCOTT</h1>
+          <h2 className='text-5xl'>Actress | Creator</h2>
         </div>
-        <div className='mx-96'>
-          <img className='h-auto' src="/images/Frankie.png" alt="" />
+        <div>
+          <img className='' src="/images/Frankie.png" alt="" />
         </div>
       </div>
       
