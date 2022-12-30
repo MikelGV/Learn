@@ -8,7 +8,7 @@ export default function Footer() {
     return(
         <>
             <footer className="text-center bg-gray-200">
-                <div className="p-6 max-w-full mx-auto bg-gray-200 shadow-lg font-bebasneue flex items-center text-center">
+                <div className="p-8 max-w-full mx-auto bg-gray-200 shadow-lg font-bebasneue flex items-center text-center">
                     <div className="mr-auto">
                         <ul>
                             <li>
@@ -30,7 +30,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="p-2 max-w-full mx-auto bg-gray-300 shadow-lg font-bebasneue text-center">
+                <div className="p-1 max-w-full mx-auto bg-gray-300 shadow-lg font-bebasneue text-center">
                     <div className="flex justify-center md:mr-auto">
                         <h1>Made By <Link href="https://www.mikelgaldos.com" target="_blank">Mikel Galdos</Link></h1>
                     </div>
