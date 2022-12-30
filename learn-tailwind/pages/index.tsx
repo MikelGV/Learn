@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 export default function Home() {
   return (
     <Layout home>
-      <div className='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4'>
+      {/* <div className='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4'>
         <div className='shrink-0'>
           <img className='h-12 w-12' src="/img/logo.svg" alt="ChitChat Logo" />
         </div>
@@ -26,15 +26,15 @@ export default function Home() {
           </div>
           <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
         </div>
-      </div>
+      </div> */}
 
-      <div className='p-6 font-bebasneue flex items-center'>
+      <div className='font-bebasneue flex items-center'>
         <div className='mx-80'>
           <h1 className='text-7xl'>FRANKIE TAYLOR SCOTT</h1>
           <h2 className='text-5xl'>Actress | Creator</h2>
         </div>
-        <div>
-          <img className='' src="/images/Frankie.png" alt="" />
+        <div className='flex items-center shadow-2xl'>
+          <img src="/images/Frankie.png" alt="" />
         </div>
       </div>
       
