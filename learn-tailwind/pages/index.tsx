@@ -29,13 +29,26 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className='font-bebasneue flex items-center'>
-        <div className='mx-80'>
-          <h1 className='text-7xl'>FRANKIE TAYLOR SCOTT</h1>
-          <h2 className='text-5xl'>Actress | Creator</h2>
+      <div className='font-bebasneue'>
+        <div id='index' className='flex items-center'>
+          <div className='mx-80'>
+            <h1 className='text-7xl'>FRANKIE TAYLOR SCOTT</h1>
+            <h2 className='text-5xl'>Actress | Creator</h2>
+          </div>
+          <div className='flex items-center shadow-2xl'>
+            <img src="/images/Frankie.png" alt="" />
+          </div>
         </div>
-        <div className='flex items-center shadow-2xl'>
-          <img src="/images/Frankie.png" alt="" />
+        <div id='About' className='flex items-center justify-center h-screen'>
+          <div className='text-center'>
+            <h2 className='text-4xl underline mb-10'>About Me</h2>
+            <p className='max-w-lg text-left text-xl'>
+              Frankie's pursuit of performance started from the age of 5 when she first started taking private singing classes and from this has branched into many creative avenues. 
+              Taking her first singing examination with ABRSM at the age of 7, 
+              Frankie continued her training and has since achieved Grade 8 Distinction in Musical Theatre performance. Frankie went on to attain her BA Hons Acting Degree studying at Bath School of Music and Performance graduating in 2021.
+              Throughout her studies at university, Frankie discovered her passion for the art of voice over. 
+              Since graduating she has had multiple classes training under notable talents and has continued to do so into her professional career. </p>
+          </div>
         </div>
       </div>
       
