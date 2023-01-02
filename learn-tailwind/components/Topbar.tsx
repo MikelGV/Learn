@@ -23,7 +23,7 @@ export default function Topbar(): JSX.Element {
                             <span className="border-r border border-slate-900"></span>
                         </li>
                         <li>
-                            <Link href="Contact">Contact</Link>
+                            <Link href="/contact">Contact</Link>
                         </li>
                     </ul>
                 </div>
