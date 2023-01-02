@@ -41,13 +41,20 @@ export default function Home() {
         </div>
         <div id='About' className='flex items-center justify-center h-screen'>
           <div className='text-center'>
-            <h2 className='text-4xl underline mb-10'>About Me</h2>
-            <p className='max-w-lg text-left text-xl'>
+            <h2 className='text-4xl underline mb-10'>About Frankie</h2>
+            <p className='max-w-lg text-left text-xl mb-6 font-poppins'>
               Frankie's pursuit of performance started from the age of 5 when she first started taking private singing classes and from this has branched into many creative avenues. 
               Taking her first singing examination with ABRSM at the age of 7, 
               Frankie continued her training and has since achieved Grade 8 Distinction in Musical Theatre performance. Frankie went on to attain her BA Hons Acting Degree studying at Bath School of Music and Performance graduating in 2021.
               Throughout her studies at university, Frankie discovered her passion for the art of voice over. 
-              Since graduating she has had multiple classes training under notable talents and has continued to do so into her professional career. </p>
+              Since graduating she has had multiple classes training under notable talents and has continued to do so into her professional career. 
+            </p>
+            <p className='max-w-lg text-left text-xl font-poppins'>
+            Frankie has also started her own successful streaming career on both YouTube and Twitch platforms, 
+            achiving partnership on both. Frankie created her platforms to fuse together her love for video games and passion for performance. 
+            Frankie, otherwise known as 'Frankie Lollia' on her platforms, 
+            has grown her audience for the past 2 years amassing over 40,000 subscribers on YouTube for both her voice acting for 'The Otachan Show' as well as her condensed Video game playthroughs. 
+            </p>
           </div>
         </div>
       </div>
