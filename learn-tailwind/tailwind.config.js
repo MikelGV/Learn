@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bebasneue: "'Bebas neue', 'serif'"
+        bebasneue: "'Bebas neue', 'serif'",
+        poppins: "'Poppins', 'serif'"
       }
     },
   },
