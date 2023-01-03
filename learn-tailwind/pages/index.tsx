@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </div>
         <div id='About' className='flex items-center justify-center h-screen space-x-4'>
-          <div className='text-center mb-60'>
+          <div className='text-center'>
             <h2 className='text-4xl underline mb-10'>About Frankie</h2>
             <p className='text-left text-lg font-poppins max-w-4xl'>
               Frankie's pursuit of performance started from the age of 5 when she first started taking private singing classes and from this has branched into many creative avenues. 
@@ -58,7 +58,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div>test</div>
+        <div id='Portfolio' className='flex items-center justify-center h-screen space-x-4'>
+          <div className='text-center'>test</div>
+        </div>
       </div>
       
     </Layout>
