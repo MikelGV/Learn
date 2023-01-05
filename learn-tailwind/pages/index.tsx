@@ -58,11 +58,16 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div id='Portfolio' className='flex items-center justify-center h-screen space-x-4'>
-          <div className='text-center'>test</div>
+        <div className='flex items-center justify-center h-screen space-x-4'>
+          <div className='text-center'>
+            <h1 className='text-4xl underline mb-10'>PREVIOUS STREAM SPONSORSHIP</h1>
+            <div className='grid grid-cols-2 gap-4'>
+              <img className='block mx-auto h-60 sm:shrink-0' src="/images/epicgames.jpg" alt="epic" />
+              <img className='block mx-auto h-48 sm:shrink-0' src="/images/SquareEnix.jpg" alt="square" />
+            </div>
+          </div>
         </div>
       </div>
-      
     </Layout>
     </>
   )
