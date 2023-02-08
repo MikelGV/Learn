@@ -23,7 +23,7 @@
                                 <span class="text-gray-800">{{ $chirp->user->name }}</span>
                                 <small class="ml-2 text-sm text-gray-600">{{ $chirp->created_at->format('j M Y, g:i a') }}</small>
                                 @unless ($chirp->created_at->eq($chirp->updated_at))
-                                    <small class="text-sm text-gray-600"> $middot; {{ __('edited') }} </small>
+                                    <small class="text-sm text-gray-600"> &middot; {{ __('edited') }} </small>
                                 @endunless
                             </div>
                             @if ($chirp->user->is(auth()->user()))
