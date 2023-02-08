@@ -106,5 +106,8 @@ class ChirpController extends Controller
     public function destroy(Chirp $chirp)
     {
         //
+        $chirp->delete();
+
+        return redirect(route('chirps.index'));
     }
 }
