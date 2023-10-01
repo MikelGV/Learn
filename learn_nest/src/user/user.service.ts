@@ -20,19 +20,19 @@ export class UserService {
     return this.userRepository.save(user);
   }
 
-  findAll() {
-    return `This action returns all user`;
+  findAllUsers():Promise<User[]> {
+    return this.userRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  viewUser(id: number):Promise<User> {
+    return this.userRepository.findOneBy({ id });
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} user`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  removeUser(id: number):Promise<{affected?: number}> {
+    return this.userRepository.delete(id);
   }
 }
