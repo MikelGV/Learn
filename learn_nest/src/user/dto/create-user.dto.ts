@@ -14,13 +14,13 @@ export class CreateUserDto {
     email: string;
   
     @IsNotEmpty()
-    @Matches(pwordRegex, {
-        message: 
-        `Password must contain a Minimum 8 and Maximum 20 characters,
-        at least one uppercase letter,
-        one lowercase letter,
-        one number and
-        one special character`,
-    })
+    // @Matches(pwordRegex, {
+    //     message: 
+    //     `Password must contain a Minimum 8 and Maximum 20 characters,
+    //     at least one uppercase letter,
+    //     one lowercase letter,
+    //     one number and
+    //     one special character`,
+    // })
     password: string;
   }
