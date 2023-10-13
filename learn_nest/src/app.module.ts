@@ -6,6 +6,8 @@ import { UserModule } from './user/user.module';
 
 import * as dotenv from 'dotenv';
 import { User } from './user/entities/user.entity';
+import { APP_GUARD } from '@nestjs/core';
+import { RolesGuard } from './common/guards/roles/roles.guard';
 
 dotenv.config();
 
@@ -24,6 +26,9 @@ dotenv.config();
     UserModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, {
+    provide: APP_GUARD,
+    useClass: RolesGuard
+  }],
 })
 export class AppModule {}
