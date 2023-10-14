@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ParseIntPipe } from 
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { Roles } from 'src/common/decorators/roles/roles.decorator';
 
 @Controller('user')
 export class UserController {
@@ -15,6 +16,7 @@ export class UserController {
 
   
 @Get()
+@Roles(['admin'])
 async findAll() {
   return this.userService.findAllUsers();
 }
