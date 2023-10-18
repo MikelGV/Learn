@@ -6,8 +6,9 @@ import { UserModule } from './user/user.module';
 
 import * as dotenv from 'dotenv';
 import { User } from './user/entities/user.entity';
-import { APP_GUARD } from '@nestjs/core';
+import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { RolesGuard } from './common/guards/roles/roles.guard';
+import { LoggingInterceptor } from './common/interceptors/logging/logging.interceptor';
 
 dotenv.config();
 
@@ -26,9 +27,15 @@ dotenv.config();
     UserModule
   ],
   controllers: [AppController],
-  providers: [AppService, {
-    provide: APP_GUARD,
-    useClass: RolesGuard
-  }],
+  providers: [AppService,
+    {
+      provide: APP_GUARD,
+      useClass: RolesGuard
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: LoggingInterceptor
+    }
+  ],
 })
 export class AppModule {}
