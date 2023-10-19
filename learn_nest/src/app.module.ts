@@ -10,6 +10,7 @@ import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { RolesGuard } from './common/guards/roles/roles.guard';
 import { LoggingInterceptor } from './common/interceptors/logging/logging.interceptor';
 import { ErrorsInterceptor } from './common/interceptors/errors/errors.interceptor';
+import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
 
 dotenv.config();
 
@@ -40,6 +41,10 @@ dotenv.config();
     {
       provide: APP_INTERCEPTOR,
       useClass: ErrorsInterceptor
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: TimeoutInterceptor
     }
   ],
 })
