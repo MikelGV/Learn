@@ -9,6 +9,7 @@ import { User } from './user/entities/user.entity';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { RolesGuard } from './common/guards/roles/roles.guard';
 import { LoggingInterceptor } from './common/interceptors/logging/logging.interceptor';
+import { ErrorsInterceptor } from './common/interceptors/errors/errors.interceptor';
 
 dotenv.config();
 
@@ -35,6 +36,10 @@ dotenv.config();
     {
       provide: APP_INTERCEPTOR,
       useClass: LoggingInterceptor
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: ErrorsInterceptor
     }
   ],
 })
