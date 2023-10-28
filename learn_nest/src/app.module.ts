@@ -11,7 +11,6 @@ import { LoggingInterceptor } from './common/interceptors/logging/logging.interc
 import { ErrorsInterceptor } from './common/interceptors/errors/errors.interceptor';
 import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
 import { AuthModule } from './auth/auth.module';
-import { DatabaseModule } from './config/database/database.module';
 
 dotenv.config();
 
@@ -31,7 +30,6 @@ dotenv.config();
     }),
     UserModule,
     AuthModule,
-    DatabaseModule
   ],
   controllers: [AppController],
   providers: [AppService,
