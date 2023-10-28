@@ -11,6 +11,7 @@ import { RolesGuard } from './common/guards/roles/roles.guard';
 import { LoggingInterceptor } from './common/interceptors/logging/logging.interceptor';
 import { ErrorsInterceptor } from './common/interceptors/errors/errors.interceptor';
 import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
+import { AuthModule } from './auth/auth.module';
 
 dotenv.config();
 
@@ -26,7 +27,8 @@ dotenv.config();
       entities: [User],
       synchronize: true,
     }),
-    UserModule
+    UserModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService,
