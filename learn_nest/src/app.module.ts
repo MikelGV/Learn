@@ -3,8 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
-
-import * as dotenv from 'dotenv';
+import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { RolesGuard } from './common/guards/roles/roles.guard';
 import { LoggingInterceptor } from './common/interceptors/logging/logging.interceptor';
@@ -12,21 +11,23 @@ import { ErrorsInterceptor } from './common/interceptors/errors/errors.intercept
 import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
 import { AuthModule } from './auth/auth.module';
 
-dotenv.config();
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.DB_HOST,
-      port: parseInt(process.env.DB_PORT),
-      password: process.env.DB_PWORD,
-      username: process.env.DB_USERNAME,
-      database: process.env.DB_DB,
-      entities: [
-        "dist/**/*.entity{.ts,.js}",
-      ],
-      synchronize: true,
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRootAsync({
+      useFactory: () => ({
+        type: 'postgres',
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT),
+        password: process.env.DB_PWORD,
+        username: process.env.DB_USERNAME,
+        database: process.env.DB_DB,
+        entities: [
+          "dist/**/*.entity{.ts,.js}",
+        ],
+        synchronize: true,
+      })
     }),
     UserModule,
     AuthModule,
