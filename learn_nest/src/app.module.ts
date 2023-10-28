@@ -5,13 +5,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 
 import * as dotenv from 'dotenv';
-import { User } from './user/entities/user.entity';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { RolesGuard } from './common/guards/roles/roles.guard';
 import { LoggingInterceptor } from './common/interceptors/logging/logging.interceptor';
 import { ErrorsInterceptor } from './common/interceptors/errors/errors.interceptor';
 import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
 import { AuthModule } from './auth/auth.module';
+import { DatabaseModule } from './config/database/database.module';
 
 dotenv.config();
 
@@ -30,7 +30,8 @@ dotenv.config();
       synchronize: true,
     }),
     UserModule,
-    AuthModule
+    AuthModule,
+    DatabaseModule
   ],
   controllers: [AppController],
   providers: [AppService,
@@ -49,7 +50,8 @@ dotenv.config();
     {
       provide: APP_INTERCEPTOR,
       useClass: TimeoutInterceptor
-    }
+    },
+    
   ],
 })
 export class AppModule {}
