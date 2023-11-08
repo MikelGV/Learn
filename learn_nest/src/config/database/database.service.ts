@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Scope } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 
-@Injectable()
+@Injectable({ scope: Scope.DEFAULT })
 export class DatabaseService implements TypeOrmOptionsFactory {
 
     constructor(private configService: ConfigService) {}
