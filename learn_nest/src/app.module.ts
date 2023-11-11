@@ -16,7 +16,7 @@ import { DatabaseService } from './config/database/database.service';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true
+      isGlobal: true,
     }),
     TypeOrmModule.forRootAsync({
       useClass: DatabaseService,
@@ -25,24 +25,24 @@ import { DatabaseService } from './config/database/database.service';
     AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppService,
+  providers: [
+    AppService,
     {
       provide: APP_GUARD,
-      useClass: RolesGuard
+      useClass: RolesGuard,
     },
     {
       provide: APP_INTERCEPTOR,
-      useClass: LoggingInterceptor
+      useClass: LoggingInterceptor,
     },
     {
       provide: APP_INTERCEPTOR,
-      useClass: ErrorsInterceptor
+      useClass: ErrorsInterceptor,
     },
     {
       provide: APP_INTERCEPTOR,
-      useClass: TimeoutInterceptor
+      useClass: TimeoutInterceptor,
     },
-    
   ],
 })
 export class AppModule {}
