@@ -1,9 +1,19 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, ParseIntPipe } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  ParseIntPipe,
+} from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Roles } from 'src/common/decorators/roles/roles.decorator';
 
+//@Roles(['admin'])
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
@@ -12,16 +22,11 @@ export class UserController {
   create(@Body() createUserDto: CreateUserDto) {
     return this.userService.createUser(createUserDto);
   }
-
-
-  
-@Get()
-@Roles(['admin'])
-async findAll() {
-  return this.userService.findAllUsers();
-}
-
-  
+  @Roles(['admin'])
+  @Get()
+  async findAll() {
+    return this.userService.findAllUsers();
+  }
 
   @Get(':id')
   async findOne(@Param('id', ParseIntPipe) id: number) {
