@@ -18,7 +18,7 @@ export class RolesGuard implements CanActivate {
   }
 
   async canActivate(context: ExecutionContext) {
-    const roles = this.reflector.get(Roles, context.getHandler());
+    const roles = this.reflector.get(Roles, context.getHandler()); // use context.getClass() for Controller metadata
     if (!roles) {
       return true;
     }
