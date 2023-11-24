@@ -14,17 +14,16 @@ export class RolesGuard implements CanActivate {
       match = true;
     }
 
-    return match
+    return match;
   }
 
   async canActivate(context: ExecutionContext) {
     const roles = this.reflector.get(Roles, context.getHandler());
     if (!roles) {
-      return true
+      return true;
     }
     const request = context.switchToHttp().getRequest();
     const user = request.user;
     return this.matchRoles(roles, user.roles);
-
   }
 }
