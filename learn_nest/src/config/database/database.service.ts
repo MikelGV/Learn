@@ -1,9 +1,12 @@
-import { Injectable, Scope } from '@nestjs/common';
+import { Injectable, OnModuleInit, Scope } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 
 @Injectable({ scope: Scope.DEFAULT })
-export class DatabaseService implements TypeOrmOptionsFactory {
+export class DatabaseService implements TypeOrmOptionsFactory, OnModuleInit {
+    onModuleInit() {
+        console.log('this starts');
+    }
 
     constructor(private configService: ConfigService) {}
 
@@ -16,7 +19,7 @@ export class DatabaseService implements TypeOrmOptionsFactory {
             username: process.env.DB_USERNAME,
             database: process.env.DB_DB,
             entities: [
-            "dist/**/*.entity{.ts,.js}",
+                "dist/**/*.entity{.ts,.js}",
             ],
             synchronize: true,
         };
