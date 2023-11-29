@@ -4,9 +4,9 @@ import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 
 @Injectable({ scope: Scope.DEFAULT })
 export class DatabaseService implements TypeOrmOptionsFactory, OnModuleInit {
-    onModuleInit() {
-        console.log('this starts');
-    }
+    // onModuleInit() {
+    //     console.log('this starts');
+    // }
 
     constructor(private configService: ConfigService) {}
 
