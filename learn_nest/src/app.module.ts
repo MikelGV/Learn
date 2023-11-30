@@ -12,7 +12,6 @@ import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interc
 import { AuthModule } from './auth/auth.module';
 import { DatabaseService } from './config/database/database.service';
 
-
 @Module({
   imports: [
     ConfigModule.forRoot({

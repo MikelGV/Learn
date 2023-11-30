@@ -28,7 +28,6 @@ describe('UserController', () => {
         }
       })
       .compile();
-
     controller = module.get<UserController>(UserController);
     userService = module.get<UserService>(UserService);
   });
