@@ -22,10 +22,10 @@ export class UserController {
   create(@Body() createUserDto: CreateUserDto) {
     return this.userService.createUser(createUserDto);
   }
-  @Roles(['admin'])
+  
   @Get()
   async findAll() {
-    return this.userService.findAllUsers();
+    return this.userService.findAll();
   }
 
   @Get(':id')

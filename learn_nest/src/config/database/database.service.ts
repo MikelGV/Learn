@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 
 @Injectable({ scope: Scope.DEFAULT })
-export class DatabaseService implements TypeOrmOptionsFactory, OnModuleInit {
+export class DatabaseService implements TypeOrmOptionsFactory { // use ,onModuleInit
     // onModuleInit() {
     //     console.log('this starts');
     // }
