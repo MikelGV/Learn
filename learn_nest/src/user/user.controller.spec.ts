@@ -16,15 +16,7 @@ describe('UserController', () => {
         {
           provide: UserService,
           useValue: {
-            findAll: jest.fn().mockResolvedValue([
-              {
-                username: 'mikel',
-                email: 'mikelgaldosv@gmail.com',
-                roles: 'admin',
-                password: '78948393m',
-                id: 1,
-              },
-            ]),
+            findAll: jest.fn().mockResolvedValue([]),
           },
         },
       ],
