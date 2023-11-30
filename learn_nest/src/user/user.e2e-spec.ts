@@ -6,7 +6,7 @@ import * as request from 'supertest';
 
 describe('User', () => {
   let app: INestApplication;
-  let userService: { findAllUsers: () => ['test'] };
+  let userService: { findAll: () => ['test'] };
 
   beforeAll(async () => {
     const moduleRef = await Test.createTestingModule({
@@ -24,8 +24,9 @@ describe('User', () => {
     return request(app.getHttpServer())
       .get('/user')
       .expect(200)
-      .expect({
-        data: userService.findAllUsers
-      })
+      .expect({ data: userService.findAll() });
+  });
+  afterAll(async () => {
+    await app.close();
   });
 });
