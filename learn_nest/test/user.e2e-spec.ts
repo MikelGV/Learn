@@ -7,7 +7,15 @@ import * as request from 'supertest';
 describe('User', () => {
   let app: INestApplication;
   let userService = {
-    findAll: () => ['test'],
+    findAll: () => [
+      {
+        username: 'mikel',
+        email: 'mikelgaldosv@gmail.com',
+        roles: 'admin',
+        password: '78948393m',
+        id: 1,
+      },
+    ],
   };
 
   beforeAll(async () => {
