@@ -6,7 +6,9 @@ import * as request from 'supertest';
 
 describe('User', () => {
   let app: INestApplication;
-  let userService: { findAll: () => ['test'] };
+  let userService = {
+    findAll: () => ['test'],
+  };
 
   beforeAll(async () => {
     const moduleRef = await Test.createTestingModule({
@@ -20,7 +22,7 @@ describe('User', () => {
     await app.init();
   });
 
-  it('/GET users', () => {
+  it('/GET user', () => {
     return request(app.getHttpServer())
       .get('/user')
       .expect(200)
