@@ -16,6 +16,7 @@ import { DatabaseService } from './config/database/database.service';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      // load: [config], -> another way of configuring the database.
     }),
     TypeOrmModule.forRootAsync({
       useClass: DatabaseService,
