@@ -1,17 +1,9 @@
-import { Injectable, OnModuleInit, Scope } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { Injectable, Scope } from '@nestjs/common';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 
 @Injectable({ scope: Scope.DEFAULT })
-export class DatabaseService implements TypeOrmOptionsFactory {
-  // use ,onModuleInit
-  // onModuleInit() {
-  //     console.log('this starts');
-  // }
-
-  constructor(private configService: ConfigService) {}
-
-  createTypeOrmOptions(): TypeOrmModuleOptions {
+export class DatabaseConfiguration implements TypeOrmOptionsFactory {
+  createTypeOrmOptions(): TypeOrmModuleOptions | Promise<TypeOrmModuleOptions> {
     return {
       type: 'postgres',
       host: process.env.DB_HOST,
