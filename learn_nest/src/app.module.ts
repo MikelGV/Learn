@@ -10,7 +10,7 @@ import { LoggingInterceptor } from './common/interceptors/logging/logging.interc
 import { ErrorsInterceptor } from './common/interceptors/errors/errors.interceptor';
 import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
 import { AuthModule } from './auth/auth.module';
-import { DatabaseService } from './config/database/database.service';
+import { DatabaseConfiguration } from './config/database/database.config';
 
 @Module({
   imports: [
@@ -19,7 +19,7 @@ import { DatabaseService } from './config/database/database.service';
       // load: [config], -> another way of configuring the database.
     }),
     TypeOrmModule.forRootAsync({
-      useClass: DatabaseService,
+      useClass: DatabaseConfiguration,
     }),
     UserModule,
     AuthModule,
