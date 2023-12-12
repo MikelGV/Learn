@@ -11,12 +11,22 @@ import { ErrorsInterceptor } from './common/interceptors/errors/errors.intercept
 import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
 import { AuthModule } from './auth/auth.module';
 import { DatabaseConfiguration } from './config/database/database.config';
+import * as Joi from 'joi';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
       // load: [config], -> another way of configuring the database.
+      validationSchema: Joi.object({
+        NODE_ENV: Joi.string()
+          .valid('development', 'production', 'test', 'provision')
+          .default('development'),
+        PORT: Joi.number().default(8080),
+      }),
+      validationOptions: {
+        abortEarly: true,
+      },
     }),
     TypeOrmModule.forRootAsync({
       useClass: DatabaseConfiguration,
