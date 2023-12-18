@@ -17,7 +17,7 @@ func main() {
     //fmt.Println(message)
 
     // Request a greeting message.
-    message, err := greetings.Hello("")
+    message, err := greetings.Hello("Mikel")
    // Look for non-nil error value
     if err != nil {
         log.Fatal(err)
