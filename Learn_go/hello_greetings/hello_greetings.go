@@ -15,13 +15,15 @@ func main() {
     // Get a greeting message and print it.
     //message := greetings.Hello("Mikel")
     //fmt.Println(message)
+    
+    names := []string{"Glados", "Mikel", "Jon"}
 
     // Request a greeting message.
-    message, err := greetings.Hello("Mikel")
+    messages, err := greetings.Hellos(names)
    // Look for non-nil error value
     if err != nil {
         log.Fatal(err)
     }
 
-    fmt.Println(message)
+    fmt.Println(messages)
 }
