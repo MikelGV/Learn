@@ -11,6 +11,7 @@ import { ErrorsInterceptor } from './common/interceptors/errors/errors.intercept
 import { TimeoutInterceptor } from './common/interceptors/timeout/timeout.interceptor';
 import { AuthModule } from './auth/auth.module';
 import { DatabaseConfiguration } from './config/database/database.config';
+import { PostModule } from './post/post.module';
 import * as Joi from 'joi';
 
 @Module({
@@ -33,6 +34,7 @@ import * as Joi from 'joi';
     }),
     UserModule,
     AuthModule,
+    PostModule,
   ],
   controllers: [AppController],
   providers: [
