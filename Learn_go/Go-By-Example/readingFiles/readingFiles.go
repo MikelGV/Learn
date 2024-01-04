@@ -22,7 +22,7 @@ func main() {
     // memory.
     dat, err := os.ReadFile("/tmp/dat")
     check(err)
-    fmt.Println(string(dat))
+    fmt.Print(string(dat))
 
     // You'll often want more control over how and what part of the file are read.
     // For these tasks, start by Opening a file to obtain an os.File value.
